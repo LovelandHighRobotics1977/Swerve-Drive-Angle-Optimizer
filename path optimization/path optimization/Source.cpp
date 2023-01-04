@@ -18,23 +18,23 @@ int main() {
 
 
 
-	int angle1 = (desired - (current % 2048));
-	int angle2 = ((2048 - abs(desired % 2048)) + (2048 - abs(current % 2048)));
+	int angle1 = (desired - (current % 4096));
+	int angle2 = ((2048 - abs(desired % 4096)) + (2048 - abs(current % 4096)));
 	int shortest;
 	int check1;
 	
 
-	if (abs(angle2) < abs(angle1)) {
-		shortest = angle2;
-		check1 = true;
-	}
-	else {
+	if (abs(angle1) <= abs(angle2)) {
 		shortest = angle1;
 		check1 = false;
 	}
+	else {
+		shortest = angle2;
+		check1 = true;
+	}
 
-	angle1 = ((desired - 2048) - (current % 2048));
-	angle2 = ((2048 - (abs(desired % 2048)-2048)) + (2048 - (abs(current % 2048))));
+	angle1 = ((desired - 2048) - (current % 4096));
+	angle2 = ((2048 - (abs(desired % 4096)-2048)) + (2048 - (abs(current % 4096))));
 	
 
 	int shortest2;
@@ -48,7 +48,7 @@ int main() {
 		check2 = false;
 	}
 
-
+	//cout << "1: " << shortest << " 2: " << shortest2 << endl;
 	if (abs(shortest) <= abs(shortest2)) {
 		if (check1 == true) {
 			if (current < 0) {
