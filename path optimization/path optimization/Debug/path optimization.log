@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\Josh\source\repos\path optimization\path optimization\Source.cpp(53,21): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
+C:\Users\Josh\source\repos\path optimization\path optimization\Source.cpp(84): warning C4717: 'main': recursive on all control paths, function will cause runtime stack overflow
+  path optimization.vcxproj -> C:\Users\Josh\source\repos\path optimization\Debug\path optimization.exe
